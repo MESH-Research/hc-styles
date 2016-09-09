@@ -3,7 +3,7 @@
   "type": "wordpress-plugin",
   "autoload": {
     "psr-4": {
-      "Humanities_Commons\\Plugin\HC_Styles\\": "classes/"
+      "Humanities_Commons\\Plugin\\HC_Styles\\": "classes/"
     },
     "files": [
     ]
