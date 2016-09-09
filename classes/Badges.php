@@ -8,6 +8,14 @@ class Badges {
 
 	const MIN_IMG_WIDTH = 70; // img tags with a width less than this will not get badges
 
+	function __construct() {
+
+		wp_register_style( 'hc-styles', plugins_url( '/hc-styles/css/badges.css' ) );
+
+		add_filter( 'bp_init', [ $this, 'init' ] );
+
+	}
+
 	function add_member_badges( $img ) {
 		/**
 		 * member profile requires bp_get_displayed_user*()
@@ -64,26 +72,30 @@ class Badges {
 			}
 		}
 
-		// to prevent css conflicts, only enqueue style if we're actually adding badges
-		if ( ! empty( $badges ) ) {
-			add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_style' ] );
-		}
-
 		return $badges . $img;
 	}
 
 	function enqueue_style() {
-		wp_enqueue_style( 'hc-styles-badges', plugins_url() . '/hc-styles/css/badges.css' );
+		wp_enqueue_style( 'hc-styles' );
 	}
 
 	function init() {
 
 		if ( bp_is_members_directory() || bp_is_user_profile() ) {
+
+			add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_style' ] );
 			add_filter( 'bp_member_avatar', [ $this, 'add_member_badges' ] );
+
 		} else if ( bp_is_groups_directory() || bp_is_group() ) {
+
+			add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_style' ] );
 			add_filter( 'bp_get_group_avatar', [ $this, 'add_group_badges' ] );
+
 		} else if ( bp_is_blogs_directory() ) {
+
+			add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_style' ] );
 			add_filter( 'bp_get_blog_avatar', [ $this, 'add_blog_badges' ], 20 );
+
 		}
 
 	}

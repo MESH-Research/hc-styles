@@ -1,161 +1,32 @@
-/**
- * badges
- */
-
-.society-badge::before {
-  border-radius: 0.25em;
-  clear: left;
-  color: white;
+#logo-hc {
   float: left;
-  font-size: 0.75em;
-  left: -0.25em;
-  line-height: 0.75em;
-  padding: 0.25em;
-  position: relative;
-  top: -0.25em;
-  z-index: 10;
 }
 
-.society-badge.hc::before {
-  /*
-  background-color: black;
-  content: "HC";
-  */
+.icext-header-logo img {
+  margin-left: 12px;
 }
 
-.society-badge.mla::before {
-  background-color: #7f132a;
-  content: "MLA";
+.society-hc #center-homepage .widget h4 {
+  background-color: #08a67f;
 }
 
-.society-badge.caa::before {
-  background-color: #fcb718;
-  content: "CAA";
+.society-ajs #center-homepage .widget h4 {
+  background-color: #006c99;
 }
 
-.society-badge.ajs::before {
-  background-color: #033136;
-  content: "AJS";
+.society-aseees #center-homepage .widget h4 {
+  background-color: #a01c1f;
 }
 
-.society-badge.aseees::before {
-  background-color: #ec2127;
-  content: "ASEEES";
+.society-caa #center-homepage .widget h4 {
+  background-color: #680048;
 }
 
-
-
-/**
- * overrides for cbox-theme / cbox-mla
- */
-
-/*
-.item-avatar,
-#item-header-avatar {
-  position: relative;
+.society-mla #center-homepage .widget h4 {
+  background-color: #034a51;
 }
 
-.item-avatar {
-  height: 80px;
-  width: 80px;
-}
-
-.profile.change-avatar #item-header-avatar {
-  height: 210px;
-  width: 210px;
-}
-
-.groups.single-item #item-header-avatar {
-  height: 210px;
-  width: 210px;
-}
-
-.item-avatar .avatar,
-#item-header-avatar .avatar {
-  position: absolute;
-  left: 0;
-}
-*/
-
-/*
-.profile #item-header-avatar {
-  height: 300px;
-  width: 300px;
-}
-
-#item-header-avatar .avatar {
-  left: 0;
-}
-
-div#item-header {
-  overflow: visible !important;
-}
-*/
-
-
-/**
- * overrides for boss theme
- */
-
-
-/* members directory */
-
-#primary #members-list .item-avatar {
-  position: relative;
-  vertical-align: top;
-}
-
-#primary #members-list .item-avatar > img {
-  left: 0;
-  position: absolute;
-  top: 0;
-}
-
-#primary #members-list .item-avatar a.society-badge-wrap {
-  height: auto;
-}
-
-
-/* member profile */
-
-.profile #item-header-avatar {
-  position: relative;
-}
-
-.profile #item-header-avatar > img {
-  left: 0;
-  position: absolute;
-  top: 0;
-}
-
-
-/* groups directory */
-
-#primary #groups-list li .item-avatar {
-  position: relative;
-  vertical-align: top;
-}
-
-#primary #groups-list li .item-avatar > img {
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 70px;
-  height: 70px;
-}
-
-#primary #groups-list .item-avatar a.society-badge-wrap {
-  height: 70px;
-  width: 70px;
-}
-
-
-/* single group */
-
-/* pending bbpress template review */
-.single-item.groups .society-badge-wrap {
+.logged-in .hide-if-logged-in,
+.active-session.non-member .hide-if-active-session {
   display: none;
 }
-
-
-/* sites directory */

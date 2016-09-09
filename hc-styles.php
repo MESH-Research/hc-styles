@@ -9,13 +9,6 @@
 
 namespace Humanities_Commons\Plugin\HC_Styles;
 
-if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
-	require( __DIR__ . '/vendor/autoload.php' );
-} else {
-	// TODO throw exception and/or provide autoloader. composer isn't here so we can't autoload without providing our own
-}
-//require_once 'autoload.php';
+require_once( __DIR__ . '/vendor/autoload.php' );
 
 $Badges = new Badges;
-
-add_filter( 'bp_init', [ $Badges, 'init' ] );
