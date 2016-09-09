@@ -1,0 +1,32 @@
+#logo-hc {
+  float: left;
+}
+
+.icext-header-logo img {
+  margin-left: 12px;
+}
+
+.society-hc #center-homepage .widget h4 {
+  background-color: #08a67f;
+}
+
+.society-ajs #center-homepage .widget h4 {
+  background-color: #006c99;
+}
+
+.society-aseees #center-homepage .widget h4 {
+  background-color: #a01c1f;
+}
+
+.society-caa #center-homepage .widget h4 {
+  background-color: #680048;
+}
+
+.society-mla #center-homepage .widget h4 {
+  background-color: #034a51;
+}
+
+.logged-in .hide-if-logged-in,
+.active-session.non-member .hide-if-active-session {
+  display: none;
+}
