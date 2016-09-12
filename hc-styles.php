@@ -11,4 +11,8 @@ namespace Humanities_Commons\Plugin\HC_Styles;
 
 require_once( __DIR__ . '/vendor/autoload.php' );
 
+// initialize badges by instantiating
 $Badges = new Badges;
+
+// initialize template override functionality by instantiating
+$Template = new Template;
