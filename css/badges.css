@@ -97,6 +97,10 @@ div#item-header {
  * overrides for boss theme
  */
 
+/* hide badges in widgets (tiny avatars) */
+.widget .society-badge-wrap {
+  display: none;
+}
 
 /* members directory */
 
