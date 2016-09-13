@@ -2,7 +2,7 @@
 
 namespace Humanities_Commons\Plugin\HC_Styles;
 
-use \Humanities_Commons;
+use \Humanities_Commons; // only used if HC_SITE_URL is not defined - see add_badges()
 
 class Badges {
 

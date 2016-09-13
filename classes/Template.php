@@ -2,7 +2,6 @@
 
 namespace Humanities_Commons\Plugin\HC_Styles;
 
-use \Humanities_Commons;
 use \RecursiveDirectoryIterator;
 use \RecursiveIteratorIterator;
 use \RecursiveRegexIterator;
