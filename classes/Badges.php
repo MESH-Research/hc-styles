@@ -6,7 +6,7 @@ use \Humanities_Commons;
 
 class Badges {
 
-	const MIN_IMG_WIDTH = 70; // img tags with a width less than this will not get badges
+	const MIN_IMG_WIDTH = 50; // img tags with a width less than this will not get badges
 
 	function __construct() {
 
