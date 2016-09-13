@@ -134,6 +134,7 @@ div#item-header {
 #primary #groups-list li .item-avatar {
   position: relative;
   vertical-align: top;
+  min-width: 105px; /* even if no badges are present, ensure the avatar is correctly sized */
 }
 
 #primary #groups-list li .item-avatar > img {
