@@ -23,6 +23,12 @@
   */
 }
 
+/* TODO find a way to populate content dynamically */
+.society-badge.beta::before {
+  background-color: #7f132a;
+  content: "BETA";
+}
+
 .society-badge.mla::before {
   background-color: #7f132a;
   content: "MLA";
