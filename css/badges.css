@@ -25,8 +25,13 @@
 
 /* TODO find a way to populate content dynamically */
 .society-badge.beta::before {
-  background-color: #7f132a;
+  color: black;
+  background-color: yellow;
+  font-weight: bold;
+  border: 1px solid black;
   content: "BETA";
+  position: absolute;
+  top: -1.5em;
 }
 
 .society-badge.mla::before {
