@@ -64,8 +64,8 @@ class Badges {
 			foreach ( $types as $type ) {
 				$url = ( defined( 'HC_SITE_URL' ) ) ? HC_SITE_URL : get_blogaddress_by_id( \Humanities_Commons::$main_site->blog_id );
 
-				if ( $type !== 'hc' ) {
-					$url = 'https://' . $type . '.' . str_replace( 'https://', '', $url );
+				if ( $type !== 'hc' && $type !== 'beta' ) {
+					$url = 'https://' . $type . '.' . str_replace( 'https://', '', $url ) . '/members';
 				}
 
 				$badges .= "<a class=\"society-badge-wrap\" href=\"$url\"><span class=\"society-badge $type\"></span></a>";
