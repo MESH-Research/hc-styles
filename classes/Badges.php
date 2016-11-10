@@ -83,18 +83,18 @@ class Badges {
 
 		add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_style' ] );
 
-		if ( bp_is_members_directory() || bp_is_user_profile() ) {
+		add_filter( 'bp_get_displayed_user_avatar', [ $this, 'add_member_badges' ] );
 
+		if ( bp_is_members_directory() || bp_is_user_profile() || bp_is_user_groups() ) {
 			add_filter( 'bp_member_avatar', [ $this, 'add_member_badges' ] );
+		}
 
-		} else if ( bp_is_groups_directory() || bp_is_group() ) {
-
+		if ( bp_is_groups_directory() || bp_is_group() || bp_is_user_groups() ) {
 			add_filter( 'bp_get_group_avatar', [ $this, 'add_group_badges' ] );
+		}
 
-		} else if ( bp_is_blogs_directory() ) {
-
+		if ( bp_is_blogs_directory() ) {
 			add_filter( 'bp_get_blog_avatar', [ $this, 'add_blog_badges' ], 20 );
-
 		}
 
 	}

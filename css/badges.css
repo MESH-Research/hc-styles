@@ -87,15 +87,6 @@
 */
 
 /*
-.profile #item-header-avatar {
-  height: 300px;
-  width: 300px;
-}
-
-#item-header-avatar .avatar {
-  left: 0;
-}
-
 div#item-header {
   overflow: visible !important;
 }
@@ -105,6 +96,27 @@ div#item-header {
 /**
  * overrides for boss theme
  */
+
+#item-header-avatar {
+  position: relative;
+  width: 110px;
+  height: 110px;
+}
+
+#item-header-avatar .avatar {
+  left: 0;
+  top: 0;
+  position: absolute;
+  float: none;
+}
+
+#item-header-avatar .society-badge.beta {
+  text-shadow: none;
+}
+
+#item-header-avatar .society-badge.hc {
+  display: none;
+}
 
 /* hide badges in widgets (tiny avatars) */
 .widget .society-badge-wrap {
