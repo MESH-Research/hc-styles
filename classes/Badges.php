@@ -62,9 +62,13 @@ class Badges {
 
 		if ( $types ) {
 			foreach ( $types as $type ) {
+				if ( $type === 'beta' ) {
+					continue;
+				}
+
 				$url = ( defined( 'HC_SITE_URL' ) ) ? HC_SITE_URL : get_blogaddress_by_id( \Humanities_Commons::$main_site->blog_id );
 
-				if ( $type !== 'hc' && $type !== 'beta' ) {
+				if ( $type !== 'hc' ) {
 					$url = 'https://' . $type . '.' . str_replace( 'https://', '', $url ) . '/members';
 				}
 
