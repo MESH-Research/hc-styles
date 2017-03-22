@@ -9,11 +9,7 @@ class Badges {
 	const MIN_IMG_WIDTH = 50; // img tags with a width less than this will not get badges
 
 	function __construct() {
-
-		wp_register_style( 'hc-styles', plugins_url( '/hc-styles/css/badges.css' ) );
-
 		add_filter( 'bp_init', [ $this, 'init' ] );
-
 	}
 
 	function add_member_badges( $img ) {
@@ -80,6 +76,7 @@ class Badges {
 	}
 
 	function enqueue_style() {
+		wp_register_style( 'hc-styles', plugins_url( '/hc-styles/css/badges.css' ) );
 		wp_enqueue_style( 'hc-styles' );
 	}
 
