@@ -127,25 +127,29 @@ div#item-header {
 
 #primary #blogs-list .item-avatar,
 #primary #members-list .item-avatar,
-.search #primary .type-user .post-author {
+.search #primary .type-user .post-author,
+.search #primary .type-bp_group .post-author {
   position: relative;
   vertical-align: top;
   top: -12px; /* vertically center avatars */
 }
 
 #primary #members-list .item-avatar > img,
-.search #primary .type-user .avatar {
+.search #primary .type-user .avatar,
+.search #primary .type-bp_group .avatar {
   left: 0;
   position: absolute;
   top: 0;
 }
 
 #primary #members-list .item-avatar a.society-badge-wrap,
-.search #primary .type-user .avatar a.society-badge-wrap {
+.search #primary .type-user .avatar a.society-badge-wrap,
+.search #primary .type-bp_group .avatar a.society-badge-wrap {
   height: auto;
 }
 
-.search .type-user .entry-content .avatar {
+.search .type-user .entry-content .avatar,
+.search .type-bp_group .entry-content .avatar {
   max-width: none;
 }
 
