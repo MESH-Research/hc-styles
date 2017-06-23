@@ -19,8 +19,10 @@ class Badges {
 		 */
 		if ( $user = bp_get_displayed_user() ) {
 			$user_id = $user->id;
-		} else {
+		} else if ( bp_get_member_user_id() ) {
 			$user_id = bp_get_member_user_id();
+		} else if ( 1 === preg_match( '/user-([0-9]+)-avatar/', $img, $matches ) ) {
+			$user_id = $matches[1];
 		}
 
 		return $this->add_badges( bp_get_member_type( $user_id, false ), $img );
@@ -86,8 +88,9 @@ class Badges {
 
 		add_filter( 'bp_get_displayed_user_avatar', [ $this, 'add_member_badges' ] );
 
-		if ( bp_is_members_directory() || bp_is_user_profile() || bp_is_user_groups() ) {
+		if ( bp_is_members_directory() || bp_is_user_profile() || bp_is_user_groups() || ! empty( $_REQUEST['s'] ) ) {
 			add_filter( 'bp_member_avatar', [ $this, 'add_member_badges' ] );
+			add_filter( 'bp_core_fetch_avatar', [ $this, 'add_member_badges' ] );
 		}
 
 		if ( bp_is_groups_directory() || bp_is_group() || bp_is_user_groups() ) {

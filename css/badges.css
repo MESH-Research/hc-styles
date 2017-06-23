@@ -123,25 +123,31 @@ div#item-header {
   display: none;
 }
 
-/* members directory */
+/* members directory & search */
 
 #primary #blogs-list .item-avatar,
-#primary #members-list .item-avatar {
+#primary #members-list .item-avatar,
+.search #primary .post-author {
   position: relative;
   vertical-align: top;
   top: -12px; /* vertically center avatars */
 }
 
-#primary #members-list .item-avatar > img {
+#primary #members-list .item-avatar > img,
+.search #primary .avatar {
   left: 0;
   position: absolute;
   top: 0;
 }
 
-#primary #members-list .item-avatar a.society-badge-wrap {
+#primary #members-list .item-avatar a.society-badge-wrap,
+.search #primary .avatar a.society-badge-wrap {
   height: auto;
 }
 
+.search .entry-content .avatar {
+  max-width: none;
+}
 
 /* member profile */
 
