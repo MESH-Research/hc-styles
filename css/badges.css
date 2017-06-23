@@ -145,7 +145,7 @@ div#item-header {
   height: auto;
 }
 
-.search .entry-content .type-user .avatar {
+.search .type-user .entry-content .avatar {
   max-width: none;
 }
 
