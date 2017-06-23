@@ -92,7 +92,9 @@ class Badges {
 
 		if ( bp_is_members_directory() || bp_is_user_profile() || bp_is_user_groups() || ! empty( $_REQUEST['s'] ) ) {
 			add_filter( 'bp_member_avatar', [ $this, 'add_member_badges' ] );
-			add_filter( 'bp_core_fetch_avatar', [ $this, 'add_member_badges' ] );
+			add_action( 'loop_start', function() {
+				add_filter( 'bp_core_fetch_avatar', [ $this, 'add_member_badges' ] );
+			} );
 		}
 
 		if ( bp_is_groups_directory() || bp_is_group() || bp_is_user_groups() ) {
