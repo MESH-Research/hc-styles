@@ -17,6 +17,8 @@ class Badges {
 		 * member profile requires bp_get_displayed_user*()
 		 * member directory requires bp_get_member*()
 		 */
+		$user_id = false;
+
 		if ( $user = bp_get_displayed_user() ) {
 			$user_id = $user->id;
 		} else if ( bp_get_member_user_id() ) {
