@@ -127,25 +127,25 @@ div#item-header {
 
 #primary #blogs-list .item-avatar,
 #primary #members-list .item-avatar,
-.search #primary .post-author {
+.search #primary .type-user .post-author {
   position: relative;
   vertical-align: top;
   top: -12px; /* vertically center avatars */
 }
 
 #primary #members-list .item-avatar > img,
-.search #primary .avatar {
+.search #primary .type-user .avatar {
   left: 0;
   position: absolute;
   top: 0;
 }
 
 #primary #members-list .item-avatar a.society-badge-wrap,
-.search #primary .avatar a.society-badge-wrap {
+.search #primary .type-user .avatar a.society-badge-wrap {
   height: auto;
 }
 
-.search .entry-content .avatar {
+.search .entry-content .type-user .avatar {
   max-width: none;
 }
 
