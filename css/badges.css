@@ -153,6 +153,12 @@ div#item-header {
   max-width: none;
 }
 
+/* leave a little room to ensure avatars don't overflow */
+.search #content article {
+  margin-bottom: 20px;
+}
+
+
 /* member profile */
 
 .profile #item-header-avatar {
