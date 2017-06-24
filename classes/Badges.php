@@ -58,7 +58,7 @@ class Badges {
 			return $img;
 		}
 
-		$badges = '';
+		$badges = [];
 
 		if ( $types ) {
 			foreach ( $types as $type ) {
@@ -72,11 +72,13 @@ class Badges {
 					$url = 'https://' . $type . '.' . str_replace( 'https://', '', $url ) . '/members';
 				}
 
-				$badges .= "<a class=\"society-badge-wrap\" href=\"$url\"><span class=\"society-badge $type\"></span></a>";
+				if ( strpos( $img, $url ) === false ) {
+					$badges[] = "<a class=\"society-badge-wrap\" href=\"$url\"><span class=\"society-badge $type\"></span></a>";
+				}
 			}
 		}
 
-		return $badges . $img;
+		return implode( '', $badges ) . $img;
 	}
 
 	function enqueue_style() {
