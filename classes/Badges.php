@@ -36,6 +36,9 @@ class Badges {
 		if ( empty( $group_id ) ) {
 			$group_id = bp_get_current_group_id();
 		}
+		if ( empty( $group_id ) && 1 === preg_match( '/group-([0-9]+)-avatar/', $img, $matches ) ) {
+			$group_id = $matches[1];
+		}
 
 		return $this->add_badges( bp_groups_get_group_type( $group_id, false ), $img );
 	}
@@ -96,6 +99,7 @@ class Badges {
 			add_filter( 'bp_member_avatar', [ $this, 'add_member_badges' ] );
 			add_action( 'loop_start', function() {
 				add_filter( 'bp_core_fetch_avatar', [ $this, 'add_member_badges' ] );
+				add_filter( 'bp_core_fetch_avatar', [ $this, 'add_group_badges' ] );
 			} );
 		}
 
