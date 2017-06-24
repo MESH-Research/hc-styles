@@ -127,30 +127,41 @@ div#item-header {
 
 #primary #blogs-list .item-avatar,
 #primary #members-list .item-avatar,
-.search #primary .type-user .post-author,
-.search #primary .type-bp_group .post-author {
+.search #primary .post-author {
   position: relative;
   vertical-align: top;
   top: -12px; /* vertically center avatars */
 }
 
 #primary #members-list .item-avatar > img,
-.search #primary .type-user .avatar,
-.search #primary .type-bp_group .avatar {
+.search #primary .avatar {
   left: 0;
   position: absolute;
   top: 0;
 }
 
 #primary #members-list .item-avatar a.society-badge-wrap,
-.search #primary .type-user .avatar a.society-badge-wrap,
-.search #primary .type-bp_group .avatar a.society-badge-wrap {
+.search #primary .avatar a.society-badge-wrap {
   height: auto;
 }
 
-.search .type-user .entry-content .avatar,
-.search .type-bp_group .entry-content .avatar {
+.search .entry-content .avatar {
   max-width: none;
+}
+
+.search .entry-meta {
+  min-height: 90px;
+}
+.search .entry-meta .table-cell {
+  padding-bottom: 0;
+}
+.search #content .post-wrap {
+  padding-bottom: 0;
+}
+
+.search .vcard {
+  display: table;
+  margin-left: 95px;
 }
 
 /* leave a little room to ensure avatars don't overflow */
