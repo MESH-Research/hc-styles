@@ -153,7 +153,7 @@ div#item-header {
   min-height: 90px;
 }
 .search .entry-meta .table-cell {
-  padding-bottom: 0;
+  padding-bottom: 1.5em;
 }
 .search #content .post-wrap {
   padding-bottom: 0;
