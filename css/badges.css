@@ -204,6 +204,9 @@ div#item-header {
   width: 70px;
 }
 
+.my-groups .society-badge-wrap {
+  display: none !important;
+}
 
 /* single group */
 
