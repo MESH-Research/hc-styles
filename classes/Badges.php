@@ -105,6 +105,7 @@ class Badges {
 
 		if ( bp_is_groups_directory() || bp_is_group() || bp_is_user_groups() ) {
 			add_filter( 'bp_get_group_avatar', [ $this, 'add_group_badges' ] );
+			add_filter( 'bp_get_group_member_avatar_thumb', [ $this, 'add_member_badges' ] );
 		}
 
 		if ( bp_is_blogs_directory() ) {
