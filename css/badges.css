@@ -215,8 +215,8 @@ div#item-header {
   display: none;
 }
 
-.item-list li .item-avatar a:first-child {
-  display: none; /* these links aren't functional anyway and the formatting interferes w/badges, just hide */
+.item-list li .item-avatar a {
+  display: inline;
 }
 .single-item.groups.group-members .item-list li .item-avatar a.society-badge-wrap {
   display: block;
