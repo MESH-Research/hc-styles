@@ -17,8 +17,10 @@
 }
 
 .groups .society-badge.hc::before {
+  /*
   background-color: black;
   content: "HC";
+  */
 }
 
 /* TODO find a way to populate content dynamically */
