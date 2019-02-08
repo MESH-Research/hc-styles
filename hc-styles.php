@@ -16,3 +16,12 @@ $Badges = new Badges;
 
 // initialize template override functionality by instantiating
 $Template = new Template;
+
+$theme = wp_get_theme();
+
+$theme_name = strtolower( $theme->get( 'Name' ) );
+
+if('dispatch' === $theme_name ) {
+  wp_register_style( 'hc-styles-dispatch', plugins_url( '/hc-styles/css/dispatch-override.css' ) );
+  wp_enqueue_style( 'hc-styles-dispatch' );
+}
