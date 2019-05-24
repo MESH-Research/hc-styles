@@ -39,6 +39,11 @@
   content: "MLA";
 }
 
+.society-badge.msu::before {
+  background-color: #7f132a;
+  content: "MSU";
+}
+
 .society-badge.caa::before {
   background-color: #fcb718;
   content: "CAA";
@@ -251,5 +256,9 @@ div#item-header {
 }
 /* mla */
 #header-menu .menu-item.society-mla a {
+  background-color: #7f132a;
+}
+/* msu */
+#header-menu .menu-item.society-msu a {
   background-color: #7f132a;
 }
