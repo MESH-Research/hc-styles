@@ -26,6 +26,10 @@
   background-color: #034a51;
 }
 
+.society-msu #center-homepage .widget h4 {
+  background-color: #034a51;
+}
+
 .logged-in .hide-if-logged-in,
 .active-session.non-member .hide-if-active-session {
   display: none;
