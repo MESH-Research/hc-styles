@@ -40,7 +40,7 @@
 }
 
 .society-badge.msu::before {
-  background-color: #7f132a;
+  background-color: #18453b;
   content: "MSU";
 }
 
@@ -260,5 +260,5 @@ div#item-header {
 }
 /* msu */
 #header-menu .menu-item.society-msu a {
-  background-color: #7f132a;
+  background-color: #18453b;
 }
