@@ -26,3 +26,9 @@ if('dispatch' === $theme_name ) {
   wp_register_style( 'hc-styles-dispatch', plugins_url( '/hc-styles/css/dispatch-override.css' ) );
   wp_enqueue_style( 'hc-styles-dispatch' );
 }
+
+function filter_comment_defaults( $args ) {
+	$args['fields']['email'] .= 'Your e-mail address will not be published.';
+	return $args;
+}
+add_filter( 'comment_form_defaults', 'filter_comment_defaults' );
