@@ -27,8 +27,8 @@ if('dispatch' === $theme_name ) {
   wp_enqueue_style( 'hc-styles-dispatch' );
 }
 
-function filter_comment_defaults( $args ) {
-	$args['fields']['email'] .= 'Your e-mail address will not be published.';
-	return $args;
-}
-add_filter( 'comment_form_defaults', 'filter_comment_defaults' );
+
+//add_filter( 'comment_form_defaults', function ( $args ) {
+//	$args['fields']['comment-form-notes'] .= 'Your e-mail address will not be published.';
+//	return $args;
+//} );
