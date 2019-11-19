@@ -26,3 +26,11 @@ if('dispatch' === $theme_name ) {
   wp_register_style( 'hc-styles-dispatch', plugins_url( '/hc-styles/css/dispatch-override.css' ) );
   wp_enqueue_style( 'hc-styles-dispatch' );
 }
+
+
+add_filter( 'comment_form_defaults', function ( $args ) {
+	// i.e. different themes may have different form structures.
+	// 15 zine uses comment-form which is not using hte hook system so not affected.
+	$args['comment_notes_before'] = "<p class=\"comment-notes\"><span id=\"email-notes\">Your e-mail address will not be published.</span> Required fields are marked <span class=\"required\">*</span>.</p>";
+	return $args;
+} );
