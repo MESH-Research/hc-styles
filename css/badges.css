@@ -44,6 +44,16 @@
   content: "MSU";
 }
 
+.society-badge.sah::before {
+  background-color: #b63100;
+  content: "SAH";
+}
+
+.society-badge.up::before {
+  background-color: #b73a3a;
+  content: "UP";
+}
+
 .society-badge.caa::before {
   background-color: #fcb718;
   content: "CAA";
@@ -261,4 +271,12 @@ div#item-header {
 /* msu */
 #header-menu .menu-item.society-msu a {
   background-color: #18453b;
+}
+/* sah */
+#header-menu .menu-item.society-sah a {
+  background-color: #b63100;
+}
+/* up */
+#header-menu .menu-item.society-up a {
+  background-color: #b73a3a;
 }
