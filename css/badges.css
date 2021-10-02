@@ -54,14 +54,23 @@
   content: "UP";
 }
 
+/*
 .society-badge.caa::before {
   background-color: #fcb718;
   content: "CAA";
 }
+*/
 
+/*
 .society-badge.ajs::before {
   background-color: #033136;
   content: "AJS";
+}
+*/
+
+.society-badge.arlisna::before {
+  background-color: #729fbc;
+  content: "ARLISNA";
 }
 
 .society-badge.aseees::before {
@@ -129,6 +138,14 @@ div#item-header {
 
 #item-header-avatar .society-badge.beta {
   text-shadow: none;
+}
+
+#item-header-avatar .society-badge.ajs {
+  display: none;
+}
+
+#item-header-avatar .society-badge.caa {
+  display: none;
 }
 
 #item-header-avatar .society-badge.hc {
@@ -255,6 +272,10 @@ div#item-header {
 /* ajs */
 #header-menu .menu-item.society-ajs a {
   background-color: #033136;
+}
+/* arlisna */
+#header-menu .menu-item.society-arlisna a {
+  background-color: #729fbc;
 }
 /* aseees */
 #header-menu .menu-item.society-aseees a {
