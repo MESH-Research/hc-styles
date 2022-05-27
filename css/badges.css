@@ -78,6 +78,11 @@
   content: "ASEEES";
 }
 
+.society-badge.hastac::before {
+  background-color: #00afec;
+  content: "HASTAC";
+}
+
 
 
 /**
