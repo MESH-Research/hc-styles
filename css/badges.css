@@ -83,6 +83,11 @@
   content: "HASTAC";
 }
 
+.society-badge.dhri::before {
+  background-color: #273142;
+  content: "DHRI";
+}
+
 
 
 /**
