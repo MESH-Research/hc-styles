@@ -88,7 +88,10 @@
   content: "DHRI";
 }
 
-
+.society-badge.hc::before {
+	background-color: #7f132a;
+	content: "HC";
+}
 
 /**
  * overrides for cbox-theme / cbox-mla

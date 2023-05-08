@@ -40,7 +40,7 @@ class Badges {
 			$group_id = $matches[1];
 		}
 
-		return $this->add_badges( bp_groups_get_group_type( $group_id, false ), $img );
+		return $this->add_badges( hcommons_get_group_society_id( $group_id ), $img );
 	}
 
 	function add_blog_badges( $img ) {
@@ -64,6 +64,7 @@ class Badges {
 		$badges = [];
 
 		if ( $types ) {
+			$tcount = .8;
 			foreach ( $types as $type ) {
 				if ( $type === 'beta' ) {
 					continue;
@@ -76,7 +77,9 @@ class Badges {
 				}
 
 				if ( strpos( $img, $url ) === false ) {
-					$badges[] = "<a class=\"society-badge-wrap\" href=\"$url\"><span class=\"society-badge $type\"></span></a>";
+					$tcountpx = $tcount*10 . 'px';
+					$badges[] = "<a class=\"society-badge-wrap\" href=\"$url\" style=\"top:$tcountpx;\"><span class=\"society-badge $type\"></span></a>";
+					$tcount+=2;
 				}
 			}
 		}
