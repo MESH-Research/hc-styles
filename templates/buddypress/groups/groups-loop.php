@@ -1,47 +1,30 @@
 <?php
-
 /**
  * BuddyPress - Groups Loop
  *
- * Querystring is set via AJAX in _inc/ajax.php - bp_legacy_theme_object_filter()
- *
- * @package BuddyPress
- * @subpackage bp-legacy
+ * @since 3.0.0
+ * @version 7.0.0
  */
 
-?>
+bp_nouveau_before_loop(); ?>
 
-<?php do_action( 'bp_before_groups_loop' ); ?>
+<?php if ( bp_get_current_group_directory_type() ) : ?>
+	<p class="current-group-type"><?php bp_current_group_directory_type_message(); ?></p>
+<?php endif; ?>
 
 <?php if ( bp_has_groups( bp_ajax_querystring( 'groups' ) ) ) : ?>
 
-	<div id="pag-top" class="pagination">
+	<?php bp_nouveau_pagination( 'top' ); ?>
 
-		<div class="pag-count" id="group-dir-count-top">
+	<ul id="groups-list" class="<?php bp_nouveau_loop_classes(); ?>">
 
-			<?php bp_groups_pagination_count(); ?>
+		<?php while ( bp_groups() ) : bp_the_group(); ?>
 
-		</div>
-
-		<div class="pagination-links" id="group-dir-pag-top">
-
-			<?php bp_groups_pagination_links(); ?>
-
-		</div>
-
-	</div>
-
-	<?php do_action( 'bp_before_directory_groups_list' ); ?>
-
-	<ul id="groups-list" class="item-list" role="main">
-
-	<?php while ( bp_groups() ) : bp_the_group(); ?>
-
-		<li <?php bp_group_class(); ?>>
+			<li <?php bp_group_class(); ?>>
 			<div class="item-avatar">
-				<?php /* <a href="<?php bp_group_permalink(); ?>"> */ ?>
+				<?php /* <a href="<?php bp_group_permalink(); ?>">  */?>
 					<?php bp_group_avatar( 'type=full&width=70&height=70' ); ?>
-				<?php /* </a> */ ?>
+				<?php /* </a>  */?>
 			</div>
 
 			<div class="item">
@@ -84,34 +67,18 @@
 			<div class="clear"></div>
 		</li>
 
-	<?php endwhile; ?>
+		<?php endwhile; ?>
 
 	</ul>
 
-	<?php do_action( 'bp_after_directory_groups_list' ); ?>
+	<?php bp_nouveau_pagination( 'bottom' ); ?>
 
-	<div id="pag-bottom" class="pagination">
+<?php else : ?>
 
-		<div class="pag-count" id="group-dir-count-bottom">
-
-			<?php bp_groups_pagination_count(); ?>
-
-		</div>
-
-		<div class="pagination-links" id="group-dir-pag-bottom">
-
-			<?php bp_groups_pagination_links(); ?>
-
-		</div>
-
-	</div>
-
-<?php else: ?>
-
-	<div id="message" class="info">
-		<p><?php _e( 'There were no groups found.', 'boss' ); ?></p>
-	</div>
+	<?php bp_nouveau_user_feedback( 'groups-loop-none' ); ?>
 
 <?php endif; ?>
 
-<?php do_action( 'bp_after_groups_loop' ); ?>
+<?php
+bp_nouveau_after_loop();
+
